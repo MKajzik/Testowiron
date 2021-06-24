@@ -16,4 +16,4 @@ jobs:
 
       - name: Set up env vars
         run: |
-          cat version.txt
+          cat versiont.txt
