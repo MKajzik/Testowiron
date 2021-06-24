@@ -1,0 +1,19 @@
+name: auto-generate-schema
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-schema:
+    name: auto-generate-schema
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up env vars
+        run: |
+          cat version.txt
